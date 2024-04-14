@@ -1,0 +1,22 @@
+build = "sh qlsetup.sh"
+run = "sbcl main.lisp"
+entrypoint = "main.lisp"
+language = "lisp"
+hidden = ["quicklisp/**"]
+
+[nix]
+channel = "nixos-23.11"
+
+[env]
+LISP_ENV = "dev"
+
+[languages.lisp]
+pattern = "**/*.lisp"
+
+[languages.lisp.languageServer]
+start = ["lisp-analyzer"]
+
+[[ports]]
+localPort = 3000
+externalPort = 3000
+exposeLocalhost = true

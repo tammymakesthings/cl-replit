@@ -1,0 +1,27 @@
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = true
+charset = utf-8
+
+[*.{lisp,cl}]
+indent_style = space
+indent_size = 2
+
+[Makefile]
+indent_style = tab
+
+[*.{json,yml,toml}]
+indent_style = space
+indent_size = 4
+
+[replit.nix]
+indent_style = space
+indent_size = 2
+
+[.nixos]
+indent_style = space
+indent_size = 2
